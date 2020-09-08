@@ -6,11 +6,13 @@ import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProviders
 import ir.pattern.udemyredesign.R
+import ir.pattern.udemyredesign.data.VideoData
 import ir.pattern.udemyredesign.ui.base.fragment.BaseRecyclerFragment
 import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
+import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
 class DetailFragment : BaseRecyclerFragment() {
@@ -27,7 +29,7 @@ class DetailFragment : BaseRecyclerFragment() {
 
     override fun getDataList(): List<BaseRecyclerData> {
         return listOf(
-            EmptyViewData(),
+            VideoViewData(VideoData("","","")),
             EmptyViewData()
         )
     }

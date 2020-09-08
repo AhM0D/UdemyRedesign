@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseViewHolder
 import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
+import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
 import ir.pattern.udemyredesign.ui.detail.holder.EmptyViewViewHolder
+import ir.pattern.udemyredesign.ui.detail.holder.VideoViewHolder
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
 
@@ -22,6 +24,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
         when (viewType) {
             EmptyViewData.VIEW_TYPE -> {
                 holder = EmptyViewViewHolder(view)
+            }
+            VideoViewData.VIEW_TYPE -> {
+                holder = VideoViewHolder(view)
             }
         }
         return holder!!
