@@ -7,8 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ir.pattern.udemyredesign.R
+import ir.pattern.udemyredesign.ui.base.fragment.BaseRecyclerFragment
+import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
+import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
+import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
+import ir.pattern.udemyredesign.ui.base.recycler.BaseViewHolder
 
-class DetailFragment : Fragment() {
+class DetailFragment : BaseRecyclerFragment() {
 
     companion object {
         fun newInstance() = DetailFragment()
@@ -16,9 +21,21 @@ class DetailFragment : Fragment() {
 
     private lateinit var viewModel: DetailViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.detail_fragment, container, false)
+
+    override fun getDataList(): List<BaseRecyclerData> {
+        TODO("Not yet implemented")
+    }
+
+    override fun createAdapter(): BaseAdapter {
+        TODO("Not yet implemented")
+    }
+
+    override fun getLayoutType(): LayoutType {
+        return LayoutType.LINEAR_LAYOUT
+    }
+
+    override fun getMaxSpan(): Int {
+        TODO("Not yet implemented")
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
