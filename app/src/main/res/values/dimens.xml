@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="huge_banner_max_width">600dp</dimen>
+    <dimen name="huge_banner_max_height">660dp</dimen>
+
+    <dimen name="card_view_elevation">1dp</dimen>
+    <dimen name="card_view_radius">5dp</dimen>
+    <!-- margin -->
+    <dimen name="margin_default">8dp</dimen>
+
+    <!-- navid: margin_default defined in "values-large" too, but it was wrong. -->
+    <!-- now it can't be removed because there is design for tablets based on that. -->
+    <!-- from now on use version 2 of margin_default. -->
+    <dimen name="margin_default_v2">8dp</dimen>
+    <dimen name="margin_default_v2_quarter">2dp</dimen>
+    <dimen name="margin_default_v2_half">4dp</dimen>
+    <dimen name="margin_default_v2_double">16dp</dimen>
+    <dimen name="margin_default_v2_triple">24dp</dimen>
+    <dimen name="margin_default_v2_setting">30dp</dimen>
+    <dimen name="margin_default_v2_oneHalf">12dp</dimen>
+    <dimen name="margin_default_v2_home">56dp</dimen>
+
+    <!-- font sizes -->
+    <dimen name="font_size_very_small">8dp</dimen>
+    <dimen name="font_size_small">10dp</dimen>
+    <dimen name="font_size_normal">12dp</dimen>
+    <dimen name="font_size_medium">14dp</dimen>
+    <dimen name="font_size_large">16dp</dimen>
+    <dimen name="font_size_huge">18dp</dimen>
+    <dimen name="font_size_super_huge">20dp</dimen>
+
+</resources>
