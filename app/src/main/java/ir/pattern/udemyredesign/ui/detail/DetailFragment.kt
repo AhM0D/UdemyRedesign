@@ -1,17 +1,12 @@
 package ir.pattern.udemyredesign.ui.detail
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import ir.pattern.udemyredesign.R
+import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProviders
 import ir.pattern.udemyredesign.ui.base.fragment.BaseRecyclerFragment
 import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
-import ir.pattern.udemyredesign.ui.base.recycler.BaseViewHolder
 
 class DetailFragment : BaseRecyclerFragment() {
 
@@ -35,6 +30,14 @@ class DetailFragment : BaseRecyclerFragment() {
     }
 
     override fun getMaxSpan(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun getIsToolbarAvailable(): Boolean {
+        return true
+    }
+
+    override fun setToolbarIcons(toolbar: Toolbar) {
         TODO("Not yet implemented")
     }
 

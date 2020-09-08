@@ -2,6 +2,7 @@ package ir.pattern.udemyredesign.ui.base.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,8 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
     abstract fun createAdapter(): BaseAdapter
     abstract fun getLayoutType(): LayoutType
     abstract fun getMaxSpan(): Int
+    abstract fun getIsToolbarAvailable(): Boolean
+    abstract fun setToolbarIcons(toolbar: Toolbar)
 
 
     fun getLayoutManager(): RecyclerView.LayoutManager? {
@@ -34,6 +37,11 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (getIsToolbarAvailable()) {
+            setToolbarIcons(toolbar)
+        } else {
+            toolbar.visibility = View.GONE
+        }
         adapter = createAdapter()
         adapter.submitList(getDataList())
         recyclerView.setHasFixedSize(false)
