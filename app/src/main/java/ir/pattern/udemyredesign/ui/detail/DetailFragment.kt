@@ -14,6 +14,7 @@ import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 import ir.pattern.udemyredesign.ui.detail.adapter.DetailRecyclerAdapter
 import ir.pattern.udemyredesign.ui.detail.data.CourseInfoData
 import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
+import ir.pattern.udemyredesign.ui.detail.data.TextTitleData
 import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
@@ -33,6 +34,7 @@ class DetailFragment : BaseRecyclerFragment() {
         return listOf(
             VideoViewData(VideoData("","","")),
             CourseInfoData(DataCreater.createCourseItemView()),
+            TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"),
             EmptyViewData()
         )
     }

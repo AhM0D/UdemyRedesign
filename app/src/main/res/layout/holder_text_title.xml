@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_v2_triple"
+        android:layout_marginRight="@dimen/margin_default_v2_triple"
+        android:layout_marginTop="@dimen/margin_default_v2"
+        android:layout_marginBottom="@dimen/margin_default_v2"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:id="@+id/title"
+            android:lineSpacingMultiplier="1.2"
+            android:fontFamily="@font/bold" />
+
+    </RelativeLayout>
+</layout>
