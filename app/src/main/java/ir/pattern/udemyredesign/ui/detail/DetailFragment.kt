@@ -33,6 +33,7 @@ class DetailFragment : BaseRecyclerFragment() {
             CourseInfoData(DataCreater.createCourseItemView()),
             TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"),
             TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"),
+            PriceViewData("£199.99"),
             EmptyViewData()
         )
     }

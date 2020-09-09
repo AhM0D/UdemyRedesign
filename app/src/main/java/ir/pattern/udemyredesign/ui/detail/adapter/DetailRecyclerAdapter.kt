@@ -35,6 +35,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             TextDescriptionData.VIEW_TYPE -> {
                 holder = TextDescriptionViewHolder(view)
             }
+            PriceViewData.VIEW_TYPE -> {
+                holder = PriceViewHolder(view)
+            }
         }
         return holder!!
     }
