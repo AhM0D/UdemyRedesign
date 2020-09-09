@@ -20,6 +20,7 @@
             android:lineSpacingMultiplier="1.2"
             android:textColor="@color/appColor"
             android:fontFamily="@font/bold_regular"
+            android:layout_marginBottom="@dimen/margin_default_v2"
             android:text="$199.9"/>
 
         <LinearLayout
