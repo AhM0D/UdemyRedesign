@@ -4,7 +4,7 @@ import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 
 
-class CourseInfoData constructor(var courseInfoList: List<BaseRecyclerData>) : BaseRecyclerData {
+class CourseInfoData constructor(var courseInfoList: ArrayList<BaseRecyclerData>) : BaseRecyclerData {
 
     companion object {
         val VIEW_TYPE: Int = ir.pattern.udemyredesign.R.layout.holder_cource_info

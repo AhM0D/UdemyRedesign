@@ -19,6 +19,7 @@ class DetailFragment : BaseRecyclerFragment() {
 
     private lateinit var detailRecyclerAdapter: DetailRecyclerAdapter
     private lateinit var graphicUtils: GraphicUtils
+    val list: ArrayList<BaseRecyclerData> = ArrayList()
 
     companion object {
         fun newInstance() = DetailFragment()
@@ -27,16 +28,16 @@ class DetailFragment : BaseRecyclerFragment() {
     private lateinit var viewModel: DetailViewModel
 
 
-    override fun getDataList(): List<BaseRecyclerData> {
-        return listOf(
-            VideoViewData(VideoData("","","")),
-            CourseInfoData(DataCreater.createCourseItemView()),
-            TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"),
-            TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"),
-            PriceViewData("£199.99"),
-            CreatorViewData(),
-            EmptyViewData()
-        )
+    override fun getDataList(): ArrayList<BaseRecyclerData> {
+        list.add(VideoViewData(VideoData("","","")))
+        list.add(CourseInfoData(DataCreater.createCourseItemView()))
+        list.add(TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"))
+        list.add(TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"))
+        list.add(PriceViewData("£199.99"))
+        list.add(CreatorViewData())
+        list.add(CurriculumData())
+        list.add(EmptyViewData())
+        return list
     }
 
     override fun createAdapter(): BaseAdapter {

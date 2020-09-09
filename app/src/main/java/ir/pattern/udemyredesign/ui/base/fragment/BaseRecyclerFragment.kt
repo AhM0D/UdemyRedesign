@@ -16,7 +16,7 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
 
     private lateinit var adapter: BaseAdapter
 
-    abstract fun getDataList(): List<BaseRecyclerData>
+    abstract fun getDataList(): ArrayList<BaseRecyclerData>
     abstract fun createAdapter(): BaseAdapter
     abstract fun getLayoutType(): LayoutType
     abstract fun getMaxSpan(): Int

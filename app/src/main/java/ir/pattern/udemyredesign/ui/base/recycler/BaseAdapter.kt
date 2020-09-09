@@ -15,6 +15,8 @@ abstract class BaseAdapter() : RecyclerView.Adapter<BaseViewHolder<*>>() {
         val MAX_SPAN = -1
     }
 
+    lateinit var list: ArrayList<BaseRecyclerData>
+
     val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BaseRecyclerData>() {
 
         override fun areItemsTheSame(
@@ -88,7 +90,18 @@ abstract class BaseAdapter() : RecyclerView.Adapter<BaseViewHolder<*>>() {
         return differ.currentList.size
     }
 
-    fun submitList(list: List<BaseRecyclerData>) {
+    fun submitList(list: ArrayList<BaseRecyclerData>) {
+        this.list = list
+        differ.submitList(list)
+    }
+
+    fun removeItem(position: Int) {
+        list.removeAt(position)
+        differ.submitList(list)
+    }
+
+    fun addItem(baseRecyclerData: BaseRecyclerData, position: Int) {
+        list.add(position, baseRecyclerData)
         differ.submitList(list)
     }
 }
