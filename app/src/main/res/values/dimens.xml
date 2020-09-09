@@ -7,6 +7,7 @@
     <dimen name="card_view_radius">5dp</dimen>
     <!-- margin -->
     <dimen name="margin_default">8dp</dimen>
+    <dimen name="margin_profile">12dp</dimen>
 
     <!-- navid: margin_default defined in "values-large" too, but it was wrong. -->
     <!-- now it can't be removed because there is design for tablets based on that. -->

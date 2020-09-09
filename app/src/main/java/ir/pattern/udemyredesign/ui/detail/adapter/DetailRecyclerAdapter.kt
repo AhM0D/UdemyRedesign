@@ -38,6 +38,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             PriceViewData.VIEW_TYPE -> {
                 holder = PriceViewHolder(view)
             }
+            CreatorViewData.VIEW_TYPE -> {
+                holder = CreatorViewHolder(view)
+            }
         }
         return holder!!
     }
