@@ -11,6 +11,8 @@ import ir.pattern.udemyredesign.ui.base.fragment.BaseRecyclerFragment
 import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
+import ir.pattern.udemyredesign.ui.detail.adapter.DetailRecyclerAdapter
+import ir.pattern.udemyredesign.ui.detail.data.CourseInfoData
 import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
 import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
 import ir.pattern.udemyredesign.utils.GraphicUtils
@@ -30,12 +32,14 @@ class DetailFragment : BaseRecyclerFragment() {
     override fun getDataList(): List<BaseRecyclerData> {
         return listOf(
             VideoViewData(VideoData("","","")),
+            CourseInfoData(DataCreater.createCourseItemView()),
             EmptyViewData()
         )
     }
 
     override fun createAdapter(): BaseAdapter {
-        detailRecyclerAdapter = DetailRecyclerAdapter()
+        detailRecyclerAdapter =
+            DetailRecyclerAdapter()
         activity?.let {
             graphicUtils = GraphicUtils(requireContext())
             detailRecyclerAdapter.setDimension(graphicUtils.getAppScreenResolution(it))

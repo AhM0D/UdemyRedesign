@@ -44,7 +44,7 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
         }
         adapter = createAdapter()
         adapter.submitList(getDataList())
-        recyclerView.setHasFixedSize(false)
+        recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(getLayoutManager())
         recyclerView.setAdapter(adapter)
         recyclerView.setPadding(0, 0, 0, 0)

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin_default_v2_half"
+    android:layout_marginLeft="@dimen/margin_default_v2_half"
+    android:padding="@dimen/margin_default_v2_half"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/course_info_bkg"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_default_v2_half"
+        android:paddingBottom="@dimen/margin_default_v2_half"
+        android:paddingLeft="@dimen/margin_default_v2"
+        android:paddingRight="@dimen/margin_default_v2"
+        >
+
+        <ImageView
+            android:id="@+id/courseInfoIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/courseInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default_v2"
+            android:textSize="14sp"
+            android:fontFamily="@font/light"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>
