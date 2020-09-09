@@ -17,7 +17,7 @@
             android:textSize="28sp"
             android:id="@+id/title"
             android:lineSpacingMultiplier="1.2"
-            android:fontFamily="@font/bold" />
+            android:fontFamily="@font/bold_regular" />
 
     </RelativeLayout>
 </layout>
