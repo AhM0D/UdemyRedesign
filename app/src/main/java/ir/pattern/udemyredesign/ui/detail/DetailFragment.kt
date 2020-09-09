@@ -12,10 +12,7 @@ import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 import ir.pattern.udemyredesign.ui.detail.adapter.DetailRecyclerAdapter
-import ir.pattern.udemyredesign.ui.detail.data.CourseInfoData
-import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
-import ir.pattern.udemyredesign.ui.detail.data.TextTitleData
-import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
+import ir.pattern.udemyredesign.ui.detail.data.*
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
 class DetailFragment : BaseRecyclerFragment() {
@@ -35,6 +32,7 @@ class DetailFragment : BaseRecyclerFragment() {
             VideoViewData(VideoData("","","")),
             CourseInfoData(DataCreater.createCourseItemView()),
             TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"),
+            TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"),
             EmptyViewData()
         )
     }

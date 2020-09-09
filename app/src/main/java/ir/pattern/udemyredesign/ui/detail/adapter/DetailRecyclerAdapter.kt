@@ -4,14 +4,8 @@ import android.view.View
 import android.view.ViewGroup
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseViewHolder
-import ir.pattern.udemyredesign.ui.detail.data.CourseInfoData
-import ir.pattern.udemyredesign.ui.detail.data.EmptyViewData
-import ir.pattern.udemyredesign.ui.detail.data.TextTitleData
-import ir.pattern.udemyredesign.ui.detail.data.VideoViewData
-import ir.pattern.udemyredesign.ui.detail.holder.CourseInfoViewHolder
-import ir.pattern.udemyredesign.ui.detail.holder.EmptyViewViewHolder
-import ir.pattern.udemyredesign.ui.detail.holder.TextTitleViewHolder
-import ir.pattern.udemyredesign.ui.detail.holder.VideoViewHolder
+import ir.pattern.udemyredesign.ui.detail.data.*
+import ir.pattern.udemyredesign.ui.detail.holder.*
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
 
@@ -37,6 +31,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             }
             TextTitleData.VIEW_TYPE -> {
                 holder = TextTitleViewHolder(view)
+            }
+            TextDescriptionData.VIEW_TYPE -> {
+                holder = TextDescriptionViewHolder(view)
             }
         }
         return holder!!
