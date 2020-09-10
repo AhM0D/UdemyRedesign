@@ -98,10 +98,12 @@ abstract class BaseAdapter() : RecyclerView.Adapter<BaseViewHolder<*>>() {
     fun removeItem(position: Int) {
         list.removeAt(position)
         differ.submitList(list)
+        notifyItemRemoved(position)
     }
 
     fun addItem(baseRecyclerData: BaseRecyclerData, position: Int) {
         list.add(position, baseRecyclerData)
         differ.submitList(list)
+        notifyItemInserted(position)
     }
 }
