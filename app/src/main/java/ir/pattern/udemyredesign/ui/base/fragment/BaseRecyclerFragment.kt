@@ -48,6 +48,15 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
         recyclerView.setLayoutManager(getLayoutManager())
         recyclerView.setAdapter(adapter)
         recyclerView.setPadding(0, 0, 0, 0)
+
+    }
+
+    fun showToolbarShadow() {
+        toolbarShadow.visibility = View.VISIBLE
+    }
+
+    fun hideToolbarShadow() {
+        toolbarShadow.visibility = View.GONE
     }
 
 

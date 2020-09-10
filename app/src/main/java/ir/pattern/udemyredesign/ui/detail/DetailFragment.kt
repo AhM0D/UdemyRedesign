@@ -13,9 +13,10 @@ import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 import ir.pattern.udemyredesign.ui.detail.adapter.DetailRecyclerAdapter
 import ir.pattern.udemyredesign.ui.detail.data.*
+import ir.pattern.udemyredesign.ui.detail.listener.RecyclerItemState
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
-class DetailFragment : BaseRecyclerFragment() {
+class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
 
     private lateinit var detailRecyclerAdapter: DetailRecyclerAdapter
     private lateinit var graphicUtils: GraphicUtils
@@ -47,6 +48,7 @@ class DetailFragment : BaseRecyclerFragment() {
             graphicUtils = GraphicUtils(requireContext())
             detailRecyclerAdapter.setDimension(graphicUtils.getAppScreenResolution(it))
         }
+        detailRecyclerAdapter.setVideoViewStateListener(this)
         return detailRecyclerAdapter
     }
 
@@ -78,5 +80,18 @@ class DetailFragment : BaseRecyclerFragment() {
         viewModel = ViewModelProviders.of(this).get(DetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
+    override fun onDetach(data: BaseRecyclerData) {
+        if (data is VideoViewData) {
+            showToolbarShadow()
+        }
+    }
+
+    override fun onAttach(data: BaseRecyclerData) {
+        if (data is VideoViewData) {
+            hideToolbarShadow()
+        }
+    }
+
 
 }
