@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/margin_default_v2_double"
+        android:layout_marginLeft="@dimen/margin_default_v2_double"
+        android:layout_marginBottom="@dimen/margin_default_v2_double"
+        >
+        <TextView
+            android:id="@+id/rate_number"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:fontFamily="@font/bold_regular"
+            android:textSize="16sp"
+            android:textColor="@color/yellow"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/margin_default_v2_quarter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="16dp"
+            android:layout_height="18dp"
+            app:layout_constraintLeft_toRightOf="@+id/rate_number"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/progress_bar"
+            android:src="@drawable/ic_star"
+            android:layout_marginRight="@dimen/margin_default_v2_double"
+
+            />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="230dp"
+            android:layout_height="20dp"
+            android:layout_margin="1dp"
+            android:indeterminate="false"
+            android:progress="1"
+            android:max="100"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/star"
+            android:progressDrawable="@drawable/curved_progress_bar"
+            app:layout_constraintRight_toLeftOf="@+id/rate"
+            />
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:fontFamily="@font/bold_regular"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/margin_default_v2_double"
+            android:layout_marginLeft="@dimen/margin_default_v2_double"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+</layout>

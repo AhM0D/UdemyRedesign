@@ -53,6 +53,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             QuestionAnswerViewData.VIEW_TYPE -> {
                 holder = QuestionAnswerViewHolder(view)
             }
+            FeedbackViewData.VIEW_TYPE -> {
+                holder = FeedbackViewHolder(view)
+            }
         }
         return holder!!
     }
