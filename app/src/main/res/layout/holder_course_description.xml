@@ -55,13 +55,13 @@
             >
             <View
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="54dp"
                 android:background="@drawable/more_gradient"
                 />
             <TextView
                 android:id="@+id/moreTxt"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_default_v2_setting"
+                android:layout_height="48dp"
                 android:fontFamily="@font/bold_regular"
                 android:lineSpacingMultiplier="1.2"
                 android:text="See More"
