@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_v2_triple"
+        android:layout_marginTop="@dimen/margin_default_v2_double"
+        android:layout_marginRight="@dimen/margin_default_v2_triple"
+        android:layout_marginBottom="@dimen/margin_default_v2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold_regular"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Curriculum"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginBottom="@dimen/margin_default_v2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_v2_quarter"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black"
+            android:text="12 Sections . 166 Lectures . 27h 55m total length"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default_v2"
+            android:layout_marginTop="@dimen/margin_default_v2"
+            android:id="@+id/curriculumRv"
+            app:layout_constraintTop_toBottomOf="@+id/desc"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/more"
+            app:layout_constraintBottom_toBottomOf="@id/curriculumRv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/more_gradient"
+                />
+            <TextView
+                android:id="@+id/moreTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_default_v2_setting"
+                android:fontFamily="@font/bold_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="See More"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="@color/appColor"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

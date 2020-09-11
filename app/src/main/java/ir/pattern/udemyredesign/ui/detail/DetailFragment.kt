@@ -36,7 +36,7 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
         list.add(TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"))
         list.add(PriceViewData("£199.99"))
         list.add(CreatorViewData())
-        list.add(CurriculumData())
+        list.add(CurriculumViewData(DataCreater.createCurriculumItem(), 3))
         list.add(EmptyViewData())
         return list
     }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_v2_half"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="@dimen/margin_default_v2_half">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNumber"
+            android:text="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/light"
+            android:textColor="@color/appColorAccent"
+            android:layout_marginRight="@dimen/margin_default_v2"
+            android:layout_marginLeft="@dimen/margin_default_v2_double"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_default_v2"
+        app:layout_constraintStart_toEndOf="@id/txtNumber"
+        app:layout_constraintEnd_toStartOf="@+id/courseIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default_v2"
+            android:layout_marginTop="@dimen/margin_default_v2_quarter"
+            android:fontFamily="@font/medium"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Welcome to the course"
+            />
+        <TextView
+            android:id="@+id/videoDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default_v2"
+            android:layout_marginTop="@dimen/margin_default_v2_quarter"
+            android:fontFamily="@font/regular"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text=""
+            />
+    </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/courseIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_article"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

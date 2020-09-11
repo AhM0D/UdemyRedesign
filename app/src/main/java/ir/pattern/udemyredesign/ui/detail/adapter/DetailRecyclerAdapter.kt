@@ -44,6 +44,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             CreatorViewData.VIEW_TYPE -> {
                 holder = CreatorViewHolder(view)
             }
+            CurriculumViewData.VIEW_TYPE -> {
+                holder = CurriculumViewHolder(view)
+            }
         }
         return holder!!
     }

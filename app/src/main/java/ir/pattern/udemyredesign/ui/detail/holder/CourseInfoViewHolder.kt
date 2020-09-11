@@ -34,7 +34,8 @@ class CourseInfoViewHolder(itemView: View) : BaseViewHolder<CourseInfoData>(item
             CourseInfoAdapter()
         detailRecyclerAdapter.submitList(data.courseInfoList)
         binding.courseInfoRv.setHasFixedSize(true)
-        binding.courseInfoRv.layoutManager =  LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.courseInfoRv.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.courseInfoRv.adapter = detailRecyclerAdapter
     }
 
