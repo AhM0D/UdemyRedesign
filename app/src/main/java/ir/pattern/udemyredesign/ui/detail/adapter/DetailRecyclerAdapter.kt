@@ -50,6 +50,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             CourseDescriptionViewData.VIEW_TYPE -> {
                 holder = CourseDescriptionViewHolder(view)
             }
+            QuestionAnswerViewData.VIEW_TYPE -> {
+                holder = QuestionAnswerViewHolder(view)
+            }
         }
         return holder!!
     }

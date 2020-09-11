@@ -29,6 +29,9 @@ class CurriculmAdapter : BaseAdapter() {
             CurriculumSecondViewData.VIEW_TYPE -> {
                 holder = CurriculumSecondViewHolder(view)
             }
+            AnswerViewData.VIEW_TYPE -> {
+                holder = AnswerViewHolder(view)
+            }
         }
         return holder!!
     }
