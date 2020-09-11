@@ -53,6 +53,51 @@ class DataCreater {
             return list
         }
 
+        fun createReviewItem(): ArrayList<BaseRecyclerData> {
+            var list: ArrayList<BaseRecyclerData> = ArrayList()
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    5f,
+                    "a month ago"
+                )
+            )
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    5f,
+                    "a month ago"
+                )
+            )
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    4.8f,
+                    "a month ago"
+                )
+            )
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    3.2f,
+                    "a month ago"
+                )
+            )
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    4.5f,
+                    "a month ago"
+                )
+            )
+            return list
+        }
+
         fun setAnswerItem(): ArrayList<BaseRecyclerData> {
             var list : ArrayList<BaseRecyclerData> = ArrayList()
             list.add(AnswerViewData("You can use one of the RPC modules, for example dnode."))

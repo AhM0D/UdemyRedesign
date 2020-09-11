@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_v2_triple"
+        android:layout_marginTop="@dimen/margin_default_v2_double"
+        android:layout_marginRight="@dimen/margin_default_v2_triple"
+        android:layout_marginBottom="@dimen/margin_default_v2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold_regular"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Reviews"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginBottom="@dimen/margin_default_v2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/reviewBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_v2"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintBottom_toTopOf="@+id/reviewRv"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/searchReview"
+            android:layout_margin="@dimen/margin_default_v2"
+            android:padding="@dimen/margin_default_v2_double"
+            android:background="@drawable/white_shape"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="Search Reviews"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="#514841"
+                android:textSize="16sp"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_default_v2"
+            android:padding="@dimen/margin_default_v2_double"
+            android:id="@+id/searchFilter"
+            android:background="@drawable/white_shape"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="All Ratings"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="#514841"
+                android:textSize="16sp"
+                />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_filter"
+                />
+        </RelativeLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default_v2"
+            android:layout_marginTop="@dimen/margin_default_v2"
+            android:id="@+id/reviewRv"
+            app:layout_constraintTop_toBottomOf="@+id/reviewBtn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/more"
+            app:layout_constraintBottom_toBottomOf="@id/reviewRv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/more_gradient"
+                />
+            <TextView
+                android:id="@+id/moreTxt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:fontFamily="@font/bold_regular"
+                android:lineSpacingMultiplier="1.2"
+                android:text="See More Reviews"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="@color/appColor"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

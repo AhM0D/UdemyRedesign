@@ -32,6 +32,9 @@ class CurriculmAdapter : BaseAdapter() {
             AnswerViewData.VIEW_TYPE -> {
                 holder = AnswerViewHolder(view)
             }
+            ReviewViewData.VIEW_TYPE -> {
+                holder = ReviewViewHolder(view)
+            }
         }
         return holder!!
     }

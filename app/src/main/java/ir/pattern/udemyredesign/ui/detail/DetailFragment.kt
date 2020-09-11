@@ -40,6 +40,7 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
         list.add(CourseDescriptionViewData("desc used from string.xml"))
         list.add(QuestionAnswerViewData(DataCreater.createQuestionItem(), 3))
         list.add(FeedbackViewData(DataCreater.createRateItem()))
+        list.add(ReviewListViewData(DataCreater.createReviewItem(),2))
         list.add(EmptyViewData())
         return list
     }
