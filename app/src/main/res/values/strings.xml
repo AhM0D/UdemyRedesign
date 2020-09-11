@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">UdemyRedesign</string>
+    <string name="course_desc">
+        *** The #1 bestselling JavaScript course on Udemy! ***
+           \n
+"Excellent course. Jonas explains the core concepts in javascript that are usually glossed over in other courses. And he does it in a manner that is clear and concise." — John Collins
+\n
+...
+
+Do you want to learn the number #1 programming language that powers the internet?
+\n
+Are you tired of wasting your time and money on random youtube videos or JavaScript courses that are either too simple, or too difficult to follow?
+\n
+Or are you struggling to deeply understand and apply JavaScript to real projects?
+
+</string>
 </resources>

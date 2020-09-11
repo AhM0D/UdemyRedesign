@@ -47,6 +47,9 @@ class DetailRecyclerAdapter : BaseAdapter() {
             CurriculumViewData.VIEW_TYPE -> {
                 holder = CurriculumViewHolder(view)
             }
+            CourseDescriptionViewData.VIEW_TYPE -> {
+                holder = CourseDescriptionViewHolder(view)
+            }
         }
         return holder!!
     }
