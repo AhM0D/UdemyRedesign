@@ -11,12 +11,15 @@ import ir.pattern.udemyredesign.ui.base.fragment.BaseRecyclerFragment
 import ir.pattern.udemyredesign.ui.base.fragment.LayoutType
 import ir.pattern.udemyredesign.ui.base.recycler.BaseAdapter
 import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
+import ir.pattern.udemyredesign.ui.base.recycler.BaseViewHolder
 import ir.pattern.udemyredesign.ui.detail.adapter.DetailRecyclerAdapter
 import ir.pattern.udemyredesign.ui.detail.data.*
+import ir.pattern.udemyredesign.ui.detail.holder.PriceViewHolder
 import ir.pattern.udemyredesign.ui.detail.listener.RecyclerItemState
 import ir.pattern.udemyredesign.utils.GraphicUtils
 
-class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
+class DetailFragment : BaseRecyclerFragment(), RecyclerItemState,
+    BaseViewHolder.OnClickListener<PriceViewHolder, PriceViewData> {
 
     private lateinit var detailRecyclerAdapter: DetailRecyclerAdapter
     private lateinit var graphicUtils: GraphicUtils
@@ -30,7 +33,7 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
 
 
     override fun getDataList(): ArrayList<BaseRecyclerData> {
-        list.add(VideoViewData(VideoData("","","")))
+        list.add(VideoViewData(VideoData("", "", "")))
         list.add(CourseInfoData(DataCreater.createCourseItemView()))
         list.add(TextTitleData("The Compelete JavaScript Course 2020: Build Real Projects!"))
         list.add(TextDescriptionData("Master JavaScript with the most complete course! Projects, challenges, quizzes, JavaScript ES6+, OOP, AJAX, Webpack"))
@@ -40,7 +43,7 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
         list.add(CourseDescriptionViewData("desc used from string.xml"))
         list.add(QuestionAnswerViewData(DataCreater.createQuestionItem(), 3))
         list.add(FeedbackViewData(DataCreater.createRateItem()))
-        list.add(ReviewListViewData(DataCreater.createReviewItem(),2))
+        list.add(ReviewListViewData(DataCreater.createReviewItem(), 2))
         list.add(EmptyViewData())
         return list
     }
@@ -53,6 +56,7 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
             detailRecyclerAdapter.setDimension(graphicUtils.getAppScreenResolution(it))
         }
         detailRecyclerAdapter.setVideoViewStateListener(this)
+        detailRecyclerAdapter.setPurchaseClickListener(this)
         return detailRecyclerAdapter
     }
 
@@ -97,5 +101,9 @@ class DetailFragment : BaseRecyclerFragment(), RecyclerItemState{
         }
     }
 
+    override fun onClick(view: View, viewHolder: PriceViewHolder, recyclerData: PriceViewData) {
+        showPurchaseBtn()
+        viewHolder.changePurchaseTxt()
+    }
 
 }

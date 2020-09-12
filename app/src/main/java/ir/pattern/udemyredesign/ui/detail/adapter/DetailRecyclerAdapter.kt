@@ -15,6 +15,8 @@ class DetailRecyclerAdapter : BaseAdapter() {
     private var dimension: GraphicUtils.Companion.Dimension? = null
     var onVideoViewState: RecyclerItemState? =
         null
+    var onPurchaseClickListener: BaseViewHolder.OnClickListener<PriceViewHolder, PriceViewData>? =
+        null
 
     override fun getViewHolder(
         parent: ViewGroup?,
@@ -39,7 +41,7 @@ class DetailRecyclerAdapter : BaseAdapter() {
                 holder = TextDescriptionViewHolder(view)
             }
             PriceViewData.VIEW_TYPE -> {
-                holder = PriceViewHolder(view)
+                holder = PriceViewHolder(view, onPurchaseClickListener)
             }
             CreatorViewData.VIEW_TYPE -> {
                 holder = CreatorViewHolder(view)
@@ -69,6 +71,10 @@ class DetailRecyclerAdapter : BaseAdapter() {
 
     fun setVideoViewStateListener(onVideoViewState: RecyclerItemState) {
         this.onVideoViewState = onVideoViewState
+    }
+
+    fun setPurchaseClickListener(onPurchaseClickListener: BaseViewHolder.OnClickListener<PriceViewHolder, PriceViewData>) {
+        this.onPurchaseClickListener = onPurchaseClickListener
     }
 
 }

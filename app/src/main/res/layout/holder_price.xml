@@ -57,9 +57,11 @@
                 android:layout_marginLeft="@dimen/margin_default"
                 android:layout_weight="1"
                 app:cardCornerRadius="24dp"
+                android:id="@+id/priceCard"
                 app:cardBackgroundColor="@color/appColorAccent"
                 >
                 <TextView
+                    android:id="@+id/purchase_txt"
                     android:layout_margin="@dimen/margin_default_v2_double"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

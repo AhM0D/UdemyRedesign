@@ -2,6 +2,8 @@ package ir.pattern.udemyredesign.ui.base.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,6 +17,7 @@ import kotlinx.android.synthetic.main.recycler_fragment.*
 abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
 
     private lateinit var adapter: BaseAdapter
+    var cartNum: Int = 0
 
     abstract fun getDataList(): ArrayList<BaseRecyclerData>
     abstract fun createAdapter(): BaseAdapter
@@ -22,6 +25,8 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
     abstract fun getMaxSpan(): Int
     abstract fun getIsToolbarAvailable(): Boolean
     abstract fun setToolbarIcons(toolbar: Toolbar)
+
+    lateinit var animation: Animation
 
 
     fun getLayoutManager(): RecyclerView.LayoutManager? {
@@ -59,7 +64,16 @@ abstract class BaseRecyclerFragment : Fragment(R.layout.recycler_fragment) {
         toolbarShadow.visibility = View.GONE
     }
 
-
+    fun showPurchaseBtn() {
+        if (purchase_layout.visibility != View.VISIBLE) {
+            animation = AnimationUtils.loadAnimation(getActivity(), R.anim.bottom_to_top)
+            purchase_layout.startAnimation(animation)
+            purchase_layout.visibility = View.VISIBLE
+        }
+        cartNum += 1
+        item_number.text = "$cartNum Item include"
+        cart_number.text = "$cartNum"
+    }
 }
 
 enum class LayoutType() {
