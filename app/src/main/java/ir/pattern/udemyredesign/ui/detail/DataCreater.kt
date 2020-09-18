@@ -67,15 +67,7 @@ class DataCreater {
                 ReviewViewData(
                     "Dani Bachour",
                     "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
-                    5f,
-                    "a month ago"
-                )
-            )
-            list.add(
-                ReviewViewData(
-                    "Dani Bachour",
-                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
-                    4.8f,
+                    2.8f,
                     "a month ago"
                 )
             )
@@ -94,6 +86,16 @@ class DataCreater {
                     4.5f,
                     "a month ago"
                 )
+
+            )
+            list.add(
+                ReviewViewData(
+                    "Dani Bachour",
+                    "Thank you so very much for this course, it's simply amazing and beautiful, clear, coincise and above of all lot of practices, his explanation is just amazing!",
+                    5f,
+                    "a month ago"
+                )
+
             )
             return list
         }

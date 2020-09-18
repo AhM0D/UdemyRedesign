@@ -6,7 +6,7 @@ import ir.pattern.udemyredesign.ui.base.recycler.BaseRecyclerData
 
 
 class ReviewViewData constructor(
-    val title: String,
+    val userName: String,
     val desc: String,
     val rate: Float,
     val date: String
@@ -27,9 +27,5 @@ class ReviewViewData constructor(
         return false
     }
 
-    enum class MediaType {
-        VIDEO,
-        ARTICLE
-    }
 
 }
